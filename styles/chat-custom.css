@@ -1,0 +1,9 @@
+.chatContainer {
+    left: auto!important;
+    right: 15px!important;
+    top: auto !important;
+    bottom: 0!important;
+    width: 280px!important;
+    height: 380px!important;
+    position: fixed;
+}

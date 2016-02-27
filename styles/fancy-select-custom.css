@@ -1,0 +1,141 @@
+/*Theme changes*/
+
+div.fancy-select div.trigger {
+    border-radius: 0;
+    box-shadow: none;
+    background: #1d2435;
+    border: 1px solid #a9a9a9;
+    color: #aeb5c3;
+    text-transform: none;
+}
+
+div.fancy-select div.trigger.open {
+    background: #2f3544;
+    border: 1px solid #475062;
+    color: #7A8498;
+    box-shadow: none;
+}
+
+div.fancy-select div.trigger:after {
+    color: #a9a9a9;
+    border-top-color: #a9a9a9;
+}
+
+div.fancy-select ul.options {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background: #eaeaea;
+    border-top: 0 none;
+    text-transform: none;
+}
+
+div.fancy-select ul.options li.selected {
+    color: #091229;
+    background: #dadada;
+}
+
+div.fancy-select ul.options li {
+    color: #6d6d6d;
+}
+
+div.fancy-select ul.options li:hover {
+    color: #091229;
+}
+
+/*Form Changes*/
+.user-contacts-form .call-time-fields .fancy-select .trigger {
+    width: 95px;
+    padding: 4px 24px 5px 9px;
+}
+
+.user-contacts-form .call-time-fields .fancy-select div.trigger:after {
+    top: 12px;
+}
+
+.user-contacts-form .call-time-fields .fancy-select ul.options {
+    width: 95px;
+}
+
+.check-form .user-choice .select-row .fancy-select .trigger {
+    font-size: 12px;
+    padding: 4px 24px 5px 9px;
+    width: 500px;
+}
+
+.check-form .user-choice .select-row .fancy-select div.trigger:after {
+    top: 12px;
+}
+
+.check-form .user-choice .select-row .fancy-select ul.options {
+    width: 500px;
+}
+
+.quote-form .fancy-select .trigger {
+    font-size: 12px;
+    padding: 4px 24px 5px 9px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.quote-form .fancy-select select {
+    font-size: 12px;
+    padding: 4px 24px 5px 9px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.quote-form .fancy-select div.trigger:after {
+    top: 9px;
+}
+
+.quote-form .fancy-select ul.options {
+    width: auto;
+    max-width: 100%;
+}
+
+.quote-form .date-fields .fancy-select .trigger {
+    font-size: 12px;
+    padding: 4px 24px 5px 9px;
+    width: 65px;
+    max-width: 100%;
+}
+
+.quote-form .date-fields .fancy-select select {
+    font-size: 12px;
+    padding: 4px 24px 5px 9px;
+    width: 65px;
+    max-width: 100%;
+}
+
+.quote-form .date-fields .fancy-select div.trigger:after {
+    top: 9px;
+}
+
+.quote-form .date-fields .fancy-select ul.options {
+    width: auto;
+    max-width: 65px;
+}
+
+.quote-form .form-row.full-width .fancy-select .trigger {
+    font-size: 12px;
+    padding: 4px 24px 5px 9px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.quote-form .form-row.full-width .fancy-select select {
+    font-size: 12px;
+    padding: 4px 24px 5px 9px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.quote-form .form-row.full-width .fancy-select div.trigger:after {
+    top: 9px;
+}
+
+.quote-form .form-row.full-width .fancy-select ul.options {
+    width: auto;
+    max-width: 100%;
+}

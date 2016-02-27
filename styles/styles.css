@@ -1,0 +1,973 @@
+html, body {
+    font: 14px/16px "Roboto Condensed", Arial, "Miriad Pro", sans-serif;
+    color: #000;
+    min-width: 1024px;
+    width: 100%;
+    min-height: 768px;
+}
+
+*, :after, :before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline-style:none;
+    border-color:transparent;
+}
+
+.clear {
+    clear: both;
+}
+
+/*General Styles*/
+#header {
+    width: 100%;
+    overflow: hidden;
+    height: 15vh;
+    min-height: 115px;
+    background: #2b72ff;
+    color: #fff;
+    position: fixed;
+    z-index: 2;
+}
+
+#main-content {
+    width: 100%;
+    min-height: 768px;
+}
+
+#main-content * {
+    /*-webkit-transition: all 0.4s;*/
+    /*transition: all 0.4s;*/
+}
+
+#main-content section .section-content {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    min-height: 768px;
+}
+
+.insurance .section-wrap {
+    height: 100%;
+    min-height: 100%;
+}
+
+.insurance .main-content .section-wrap {
+    height: 100%;
+    position: relative;
+}
+
+#navPanel {
+    height: 100%;
+    min-height: 100%;
+    min-width: 295px;
+}
+
+#mainPanel {
+    height: 100%;
+    min-height: 100%;
+    margin-left: 29%;
+    color: #fff;
+    background-color: #1d2435;
+    position: relative;
+    z-index: 1;
+}
+
+/*Header Styles*/
+#header .toolbar {
+    height: 100%;
+}
+
+ul.contacts {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: table;
+    width: 100%;
+    min-height: 100%;
+    table-layout: fixed;
+}
+
+ul.contacts li {
+    display: table-cell;
+    padding: 1vw;
+    font-size: 0.9vw;
+    line-height: 1vw;
+    text-align: center;
+    vertical-align: middle;
+}
+
+ul.contacts li.site-logo, ul.contacts li.reminder {
+    width: 25%;
+}
+
+ul.contacts li > .ico i {
+    font-size: 4.5vh;
+    padding-bottom: 10px;
+}
+
+ul.contacts li a {
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+ul.contacts li a:hover {
+    color: #edff00;
+}
+
+/* Main Panel Styles */
+
+/* Form Styles */
+
+/* General Styles */
+.main-form {
+    min-height: 100%;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 2vh 0;
+}
+
+.main-form label.field-name {
+    color: #aeb5c3;
+}
+
+.main-form input[type = text], .main-form input[type = email] {
+    width: 45%;
+    min-width: 300px;
+    height: 30px;
+    border: 1px solid #000;
+    line-height: 30px;
+    padding: 0 10px;
+    background: #e8efff;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.main-form input[type = checkbox] {
+    margin-top: 10px;
+}
+
+.main-form select {
+    width: 45%;
+    min-width: 300px;
+    height: 30px;
+    border: 1px solid #000;
+    background: #e8efff;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.main-form input[type = text]:focus, .main-form select:focus {
+    background: #fff;
+}
+
+.main-form .date-input-wrap {
+    width: 45%;
+    min-width: 300px;
+    height: 30px;
+    position: relative;
+}
+
+.main-form .date-input-wrap input[type = text] {
+    width: 100%;
+}
+
+.main-form .date-input-wrap i.fa {
+    right: 0;
+    top: 1px;
+    width: 28px;
+    height: 28px;
+    background: #2b72ff;
+    color: #fff;
+    text-align: center;
+    line-height: 28px;
+    position: absolute;
+    z-index: 2;
+}
+
+.form-wrap {
+    padding: 0 5vh;
+}
+
+.form-centered-wrap {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.date-fields {
+    width: 100%;
+    display: table;
+}
+
+.date-fields .select-date {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.date-fields button {
+    visibility: hidden;
+}
+
+.date-fields i.showDatepicker {
+    font-size: 26px;
+    margin-left: 10px;
+}
+
+/* First Step */
+
+.start-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.first-step {
+    text-align: center;
+    font-size: 2vh;
+    line-height: 3vh;
+}
+
+.first-step p {
+    padding-top: 5vh;
+}
+
+p.form-title {
+    padding: 0;
+    color: #01d67a;
+    font-size: 3vh;
+    line-height: 3.2vh;
+    text-align: center;
+}
+
+.first-step span.form-label {
+    color: #aeb5c3;
+}
+
+.first-step .form-control {
+    padding-top: 2vh;
+}
+
+.first-step .form-control .form-label {
+    padding-right: 15px;
+}
+
+.first-step .change-town select {
+    width: 268px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #2b72ff;
+    color: #fff;
+    height: 34px;
+    background-color: #2b72ff;
+}
+
+.first-step a.change-city-lnk {
+    color: #aeb5c3;
+}
+
+.first-step a.change-city-lnk:hover {
+    color: #01d67a;
+}
+
+
+/* Fancy select changes */
+
+.first-step .change-town div.fancy-select {
+    width: 268px;
+    margin: 0 auto;
+}
+
+.first-step .change-town div.fancy-select div.trigger {
+    width: 268px;
+}
+
+/* Form Styles */
+
+.form-row {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.form-row label.field-name {
+    float: left;
+    width: 25%;
+    max-width: 400px;
+    line-height: 32px;
+}
+
+.form-row .fields-wrap {
+    float: left;
+    width: 74%;
+}
+
+.form-row .fields-wrap span.field-text {
+    float: left;
+    width: 90px;
+    margin: 0 15px 0 100px;
+    line-height: 32px;
+}
+
+.form-row .fields-wrap span.field-text:first-child {
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+.form-row .fields-wrap span.field-text.long-text {
+    width: 245px;
+}
+
+.form-row .fields-wrap input, .form-row .fields-wrap select {
+    float: left;
+    margin-right: 15px;
+}
+
+.form-row .fields-wrap.inline-inputs-group input {
+
+}
+
+.form-row .fields-wrap.inline-inputs-group span.field-text {
+    width: auto;
+}
+
+.form-row .fields-wrap.inline-inputs-group.closest-cell span.field-text {
+    margin: 0 15px 0 0;
+}
+
+.form-row .date-input-wrap {
+    float: left;
+}
+.form-row input.client-info-field {
+    width: 400px;
+}
+
+/* User Info Form Styles */
+
+.user-info-form {
+    padding-top: 3vh;
+}
+
+.user-info-form p.field-title {
+    color: #01d67a;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.choose-date {
+    padding-bottom: 3vh;
+}
+
+.choose-date .date-fields {
+    width: 100%;
+    display: table;
+}
+
+.choose-date .date-fields button {
+    visibility: hidden;
+}
+
+.choose-date .date-fields i.showDatepicker {
+    font-size: 26px;
+    margin-left: 10px;
+}
+
+.choose-date .date-fields .select-date {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* User Contacts Form */
+
+.user-contacts-form .form-row {
+    padding-bottom: 0;
+}
+
+.user-contacts-form .form-row label {
+    font-size: 14px;
+    color: #a9a9a9;
+    line-height: 18px;
+}
+
+.user-contacts-form .form-row > label {
+    float: left;
+    width: 150px;
+    padding: 5px 10px;
+    border: 1px solid #a9a9a9;
+    border-width: 0 1px 1px;
+    font-size: 14px;
+    color: #a9a9a9;
+    line-height: 18px;
+    height: 30px;
+}
+
+.user-contacts-form .form-inner .form-row:first-child > label {
+    border-width: 1px;
+}
+
+.user-contacts-form .field-block {
+    float: left;
+    width: 490px;
+    position: relative;
+}
+
+.user-contacts-form .field-block:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: #01d67a;
+}
+
+.user-contacts-form .form-row .field-block input {
+    width: 100%;
+    min-width: auto;
+    height: 30px;
+    background: #1d2435;
+    border: 1px solid #a9a9a9;
+    border-width: 0 0 1px;
+    color: #aeb5c3;
+}
+
+.user-contacts-form .form-row .field-block input:focus {
+    border: 1px solid #01d67a;
+    border-width: 0 0 1px 0;
+}
+
+.user-contacts-form .form-row.get-call {
+    padding-top: 5px;
+    height: 63px;
+    overflow: visible;
+}
+
+.user-contacts-form .form-row.get-call > label {
+    margin-top: 18px;
+    border-width: 1px;
+}
+
+.user-contacts-form .field-table-wrap {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.user-contacts-form .field-table-wrap .field-item {
+    display: table-cell;
+    width: 50%;
+}
+
+.user-contacts-form .field-table-wrap .field-item:first-child {
+    padding-right: 15px;
+}
+
+.user-contacts-form .field-table-wrap .field-item label {
+    font-size: 12px;
+    line-height: 14px;
+    padding-left: 10px;
+}
+
+.user-contacts-form .call-time-fields {
+    float: left;
+    width: 100%;
+}
+
+.user-contacts-form .call-time-fields span, .user-contacts-form .call-time-fields select, .user-contacts-form .call-time-fields .fancy-select {
+    float: left;
+    margin-left: 15px;
+}
+
+.user-contacts-form .call-time-fields span {
+    font-size: 12px;
+    line-height: 29px;
+    color: #a9a9a9;
+}
+
+.user-contacts-form .call-time-fields span:first-child {
+    margin-left: 0;
+}
+
+.user-contacts-form .call-time-fields select, .user-contacts-form .call-time-fields .fancy-select {
+    margin-left: 5px;
+    width: 95px;
+}
+
+/* User Choice Check Form */
+
+.check-form p.form-title {
+    padding-bottom: 15px;
+}
+
+.check-form .form-inner {
+    border: 1px solid #a9a9a9;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.check-form .form-row {
+    width: 100%;
+    height: 36px;
+    overflow: visible;
+    line-height: 16px;
+    padding: 0 15px 10px;
+}
+
+.check-form .form-row:first-child {
+    height: 46px;
+    padding: 10px 15px 10px;
+}
+
+.check-form .user-choice {
+    position: relative;
+    float: left;
+    width: 500px;
+}
+
+.check-form .user-choice > p {
+    line-height: 26px;
+    color: #e0e2e6;
+}
+
+.check-form .user-choice .select-row {
+    position: absolute;
+    width: 100%;
+    height: 26px;
+    top: 0;
+    display: none;
+}
+
+.check-form .change-lnk {
+    float: right;
+    width: 100px;
+    text-align: right;
+    line-height: 26px;
+}
+
+.check-form .change-lnk a {
+    color: #e0e2e6;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.check-form .change-lnk a:hover {
+    color: #01d67a;
+}
+
+/* Quote Form Styles */
+
+.quote-form {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.quote-form .form-centered-wrap {
+    max-width: 660px;
+}
+
+.quote-form .form-inner {
+    float: left;
+    width: 430px;
+}
+
+.quote-form .check-user-info {
+    float: right;
+    width: 200px;
+    color: #a9a9a9;
+    text-align: center;
+}
+
+.quote-form .check-user-info.results {
+    float: none;
+    width: 100%;
+    color: #a9a9a9;
+    text-align: center;
+}
+
+.quote-form .check-user-info p {
+    padding-bottom: 10px;
+}
+
+.quote-form .form-row {
+    overflow: visible;
+    height: 36px;
+    padding-bottom: 10px;
+}
+
+.quote-form .form-row label {
+    color: #a9a9a9;
+    float: left;
+    width: 200px;
+    line-height: 26px;
+}
+
+.quote-form .form-row .field-block {
+    float: left;
+    width: 230px;
+}
+
+.quote-form .form-row .field-block.bordered-block {
+    padding: 0 10px;
+    border: 1px solid #a9a9a9;
+    border-width: 0 1px;
+}
+
+.quote-form .form-row .field-block input[type = text], .quote-form .form-row .field-block input[type = email] {
+    min-width: 100%;
+    height: 26px;
+    line-height: 26px;
+    background: #1d2435;
+    border: 1px dotted #a9a9a9;
+    border-width: 0 0 1px;
+    color: #fff;
+}
+
+.quote-form .form-row .field-block input[type = text]:focus, .quote-form .form-row .field-block input[type = email]:focus {
+    border-color: #01d67a;
+}
+
+.quote-form .form-row .field-notice input[type = text], .quote-form .form-row .field-notice input[type = email] {
+    float: left;
+    width: 110px;
+    min-width: 110px;
+}
+
+.quote-form .form-row .field-notice span.notice {
+    float: right;
+    line-height: 26px;
+}
+
+.quote-form .form-row .field-notice span.notice:hover {
+    cursor: pointer;
+}
+
+.quote-form .form-row .field-notice span.notice.currOption {
+    color: #01d67a;
+}
+
+.quote-form .links-group {
+    display: table;
+    width: 100%;
+}
+
+.quote-form .links-group .link-option {
+    display: table-cell;
+    text-align: center;
+    line-height: 26px;
+}
+
+.quote-form .links-group .link-option span:hover {
+    cursor: pointer;
+}
+
+.quote-form .links-group .link-option span.currOption {
+    color: #01d67a;
+}
+
+.quote-form .form-row .date-fields i.showDatepicker {
+    font-size: 20px;
+}
+
+.quote-form .form-row.full-width {
+    height: auto;
+}
+
+.quote-form .form-row.full-width label {
+    float: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+    line-height: 16px;
+}
+
+.quote-form .form-row.full-width .field-block {
+    float: none;
+    width: 100%;
+}
+
+.quote-form .form-row.full-width .field-block.bordered-block {
+    height: 26px;
+}
+
+.quote-form .form-row.full-width .field-notice input[type = text], .quote-form .form-row.full-width .field-notice input[type = email] {
+    width: 310px;
+}
+
+/* Action Panel Styles */
+
+.footer-bar {
+    width: 100%;
+    /*height: 24vh;*/
+    position: absolute;
+    bottom: 0;
+}
+
+.prices-section {
+    width: 100%;
+    height: 14vh;
+}
+
+.prices-section .price-wrap {
+    width: 50%;
+    float: left;
+    padding: 0 20px;
+}
+
+.prices-section p {
+    color: #2b72ff;
+    text-align: center;
+    font-size: 10vh;
+    font-weight: bold;
+    line-height: 0.8;
+    padding-bottom: 2vh;
+}
+
+.prices-section p.price-title {
+    color: #01d67a;
+    text-align: center;
+    font-size: 2vh;
+    font-weight: bold;
+    line-height: 0.8;
+}
+
+/* Action styles */
+
+.action-panel {
+    background: #111a2f;
+    width: 100%;
+    height: 140px;
+}
+
+.buttons-wrap {
+    float: left;
+    width: 49%;
+    max-width: 450px;
+}
+
+.action-button {
+    float: left;
+    width: 49%;
+    max-width: 450px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 20px 12px;
+    text-align: center;
+}
+
+.action-button:first-child {
+    padding-top: 12px;
+}
+
+.buttons-wrap .action-button {
+    float: none;
+    width: 100%;
+    max-width: 450px;
+    color: #fff;
+}
+
+.checkout-button {
+    float: right;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #d6e679;
+    cursor: pointer;
+}
+
+.btn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #d6e679;
+    color: #091229;
+}
+
+.btn:hover a {
+    color: #091229;
+}
+
+.btn span.btn-txt {
+    display: block;
+    padding: 5px;
+}
+
+.btn i.btn-ico {
+    background: #d6e679;
+    float: left;
+    height: 48px;
+    width: 48px;
+    text-align: center;
+    color: #091229;
+    font-size: 34px;
+    line-height: 48px;
+    font-weight: bold;
+}
+
+
+.return-button .btn {
+    border: 1px solid #a9a9a9;
+    color: #e6e6e6;
+}
+
+.return-button .btn:hover {
+    background: #a9a9a9;
+    color: #091229;
+}
+
+.return-button .btn a {
+    color: #e6e6e6;
+}
+
+.return-button .btn:hover a {
+    color: #091229;
+}
+
+.return-button .btn i.btn-ico {
+    background: #a9a9a9;
+}
+
+.btn .button-text-centered.btn-txt {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.checkout-info {
+    margin-bottom: -20px;
+}
+
+.checkout-info p {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+/* Aside styles */
+
+.aside {
+    float: left;
+    width: 29%;
+    background: #fff;
+}
+
+.nav-header {
+    width: 100%;
+    overflow: hidden;
+    background-color: #eaeaea;
+    padding: 1.5vh 1vw;
+    color: #1d2435;
+}
+
+.nav-header .curr-time {
+    width: 100%;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.nav-header .curr-time .wrap {
+    float: left;
+    width: 45%;
+}
+
+.nav-header .curr-time .time {
+    text-align: right;
+    float: right;
+}
+
+
+ul.insuranse-type {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    vertical-align: middle;
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+ul.insuranse-type li {
+    display: table-row;
+    color: #1d2435;
+    vertical-align: middle;
+    font-size: 105%;
+    line-height: 18px;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+ul.insuranse-type li:hover {
+    cursor: pointer;
+    background: #f5f5f5;
+}
+
+ul.insuranse-type li.curr-type span.list-tip {
+    border-left: 5px solid #2b72ff;
+}
+
+ul.insuranse-type li span {
+    padding: 1vh 1vw;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    border-top: 1px solid #e5e5e5;
+    font-size: 1.5vh;
+    line-height: 2.2vh;
+}
+
+ul.insuranse-type li.list-title {
+    background-color: #f5f5f5;
+}
+
+ul.insuranse-type li.list-title:hover {
+    cursor: auto;
+}
+
+ul.insuranse-type li.list-title span {
+    border-top: 0 none;
+}
+
+ul.insuranse-type li.list-title span.list-price {
+    font-size: 1.3vh;
+    line-height: 1.7vh;
+}
+
+
+ul.insuranse-type li.list-title .curr-city {
+    font-size: 2vw;
+    line-height: 1.4vw;
+    font-weight: bold;
+}
+
+ul.insuranse-type li span.list-tip {
+    text-align: left;
+}
+
+ul.insuranse-type li span.list-price {
+    color: #2b72ff;
+    font-weight: bold;
+    font-size: 2vh;
+}
+
+ul.insuranse-type li span.list-price.green {
+    color: #01d67a;
+}
+
+
+.blokpraverh {
+    width: 35%;
+    margin-left: 60%;
+}
+
+
