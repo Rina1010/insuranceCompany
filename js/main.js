@@ -1,11 +1,8 @@
-pageResize();
-
 $(window).load(function(){
     pageResize();
 });
 
 $(document).ready(function(){
-    pageResize();
     setDatePickerDate();
     userChoiceFormChanges();
 
@@ -18,86 +15,40 @@ $(document).ready(function(){
         $(this).toggleClass("currOption");
     });
 
-    $("select").fancySelect();
-    $("#phoneField").inputmask({"mask": "+38(999) 999-99-99"});
+    $("select:not('.curr-city select')").fancySelect();
 
+    $(".curr-city select").ddslick({
+        defaultSelectedIndex: 0,
+        height: 200,
+        width: '100%'
+    });
+
+    $(".phoneField").inputmask({"mask": "+38(999) 999-99-99"});
+
+    pageResize();
 
 });
 
 $(window).resize(function(){
-    console.log("2");
     pageResize();
 });
 
 function pageResize(){
 
-    $("ul.insuranse-type").css({
-        "padding-top": $("#navPanel .nav-header").outerHeight(),
-        "margin-top": 0 - $("#navPanel .nav-header").outerHeight()
+    $("#navPanel .section-wrap, #mainPanel .section-wrap, .news-section  .section-wrap").css({
+        "padding-top": $("#header").height()
     });
 
-    $("#main-content .main-content, #navPanel").css({
-        "height": getMinHeight($("#main-content section"), $("section.insurance"))
+    $(".main-form").css({
+        "padding-bottom": getFooterHeight() + 10
     });
 
-    $("#main-content #mainPanel").css({
-        "height": getMinHeight($("#main-content #mainPanel"), $(".section-content"))
+    $("#navPanel .section-wrap").height(function(){
+        return $("#navPanel").outerHeight() - $("#header").height();
     });
-
-    $(".section-wrap").css({
-        "padding-top": $("#header").outerHeight()
-    });
-
-    $(".section-wrap .form-wrap").css({
-        "padding-bottom": getFooterHeight()
-    });
-    $("#mainPanel .section-wrap").css({
-        "padding-bottom": getFooterHeight()
-    });
-
-    $("ul.insuranse-type").height($(".section-content").outerHeight() - $(".nav-header").outerHeight() - $("#header").outerHeight());
-
-
-    if (getFooterHeight()) {
-        $(".footer-bar").height(getFooterHeight());
-    }
-
-    $("#main-content section").each(function(){
-        $(this).css({
-            "min-height": function() {
-                if ($(this).height() < $(window).height() && $(window).height() > 768) {
-                    return $(window).height();
-                } else  {
-                    return 768;
-                }
-            }
-        })
-    });
-
-    $("#main-content section .section-content").each(function(){
-        $(this).css({
-            "min-height": function() {
-                return $(this).parent("section").outerHeight()
-            }
-        })
-    });
-
-    if ($("#mainPanel").outerHeight() < $(".section-wrap .main-form").outerHeight()) {
-        $("#mainPanel").css({
-            "height": $(".section-wrap .main-form").outerHeight() + $("#header").outerHeight()
-        })
-    }
-
-    function getMinHeight($section, $largeSection) {
-        var minHeight = "auto";
-        if ($section.outerHeight() <= $largeSection.outerHeight()) {
-            minHeight = $largeSection.outerHeight();
-        }
-        return minHeight;
-    }
 
     function getFooterHeight() {
-        return ($(".prices-section").height() + $(".action-panel").height());
+        return ($(".footer-bar").outerHeight());
     }
 
     //$.scrollify({

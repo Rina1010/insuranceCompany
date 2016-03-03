@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="js/libs/jquery-ui-1.11.4.custom/jquery-ui.theme.min.css" type="text/css">
     <link rel="stylesheet" href="js/libs/fancySelect/fancySelect.css" media="screen, projection">
     <link rel="stylesheet" href="styles/fancy-select-custom.css" type="text/css">
+    <link rel="stylesheet" href="styles/ddslick-custom.css" type="text/css">
 </head>
 <body>
 <div id="header">
@@ -45,7 +46,7 @@
             </li>
             <li>
                 <div class="ico">
-                    <i class="fa fa-mobile-phone"></i>
+                    <img src="images/ico/viber-ico.png" alt="Viber" title="Viber">
                 </div>
                 <p>+38 (066) 245 71 77</p>
             </li>
@@ -92,7 +93,28 @@
                     <ul class="insuranse-type">
                         <li class="list-title">
                             <span class="list-tip">
-                                <div class="curr-city">АЛЧЕВСК</div>
+                                <div class="curr-city">
+                                    <select class="changeCity" id="changeCity">
+                                        <option value="alch1" data-description="Зона 1">Алчевск</option>
+                                        <option value="alch2" data-description="Зона 2">Алчевск</option>
+                                        <option value="alch3" data-description="Зона 3">Алчевск</option>
+                                        <option value="alch4" data-description="Зона 4">Алчевск</option>
+                                        <option value="bc1" data-description="Зона 1">Белая церковь Белая церковь Белая церковь Белая церковь</option>
+                                        <option value="bc2" data-description="Зона 2">Белая церковь</option>
+                                        <option value="bc3" data-description="Зона 3">Белая церковь</option>
+                                        <option value="brd1" data-description="Зона 1">Бердянск</option>
+                                        <option value="brd2" data-description="Зона 2">Бердянск</option>
+                                        <option value="brd3" data-description="Зона 3">Бердянск</option>
+                                        <option value="brsp1" data-description="Зона 1">Борисполь</option>
+                                        <option value="brsp2" data-description="Зона 2">Борисполь</option>
+                                        <option value="brsp3" data-description="Зона 3">Борисполь</option>
+                                        <option value="brk1" data-description="Зона 1">Боярка</option>
+                                        <option value="brk2" data-description="Зона 2">Боярка</option>
+                                        <option value="brv1" data-description="Зона 1">Бровары</option>
+                                        <option value="vslk1" data-description="Зона 1">Васильков</option>
+                                        <option value="vnc1" data-description="Зона 1">Винница</option>
+                                    </select>
+                                </div>
                             </span>
                             <span class="list-price">Франшиза 1000</span>
                             <span class="list-price green">Франшиза 0</span>
@@ -170,36 +192,24 @@
                                     <div class="user-contacts-form">
                                         <p class="field-title">Выберите удобный Вам способ отправить напоминание</p>
                                         <div class="form-inner">
-                                            <div class="form-row">
-                                                <label for="emailField">e-mail</label>
+                                            <div class="form-row add-new-line">
+                                                <div class="select-label">
+                                                    <select>
+                                                        <option value="email">e-mail</option>
+                                                        <option value="viber">viber</option>
+                                                        <option value="skype">skype</option>
+                                                        <option value="icq">icq</option>
+                                                        <option value="CMC">CMC</option>
+                                                    </select>
+                                                </div>
                                                 <div class="field-block">
-                                                    <input type="email" id="emailField" />
+                                                    <input type="text" />
+                                                </div>
+                                                <div class="add-new-line-ico">
+                                                    <i class="fa fa-plus"></i>
                                                 </div>
                                             </div>
-                                            <div class="form-row">
-                                                <label for="emailViber">viber</label>
-                                                <div class="field-block">
-                                                    <input type="text" id="emailViber" />
-                                                </div>
-                                            </div>
-                                            <div class="form-row">
-                                                <label for="emailSkype">skype</label>
-                                                <div class="field-block">
-                                                    <input type="text" id="emailSkype" />
-                                                </div>
-                                            </div>
-                                            <div class="form-row">
-                                                <label for="emailICQ">icq</label>
-                                                <div class="field-block">
-                                                    <input type="text" id="emailICQ" />
-                                                </div>
-                                            </div>
-                                            <div class="form-row">
-                                                <label for="emailSMS">CMC</label>
-                                                <div class="field-block">
-                                                    <input type="text" id="emailSMS" />
-                                                </div>
-                                            </div>
+
                                             <div class="form-row get-call">
                                                 <label>звонок на телефон</label>
                                                 <div class="field-block">
@@ -230,6 +240,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="clear"></div>
                                 </div>
                             </div>
                             <div class="check-form">
@@ -292,7 +303,7 @@
                                         </div>
                                         <div class="form-row">
                                             <div class="user-choice">
-                                                <p>Водительский стаж: <span class="curr-text">Водители со стажем более 3х лет</span></p>
+                                                <p><span class="curr-text">Водители со стажем более 3х лет</span></p>
                                                 <div class="select-row">
                                                     <select>
                                                         <option value="over3Years">Водители со стажем более 3х лет</option>
@@ -348,8 +359,19 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="form-centered-wrap">
+                                    <div class="form-inner">
+                                        <div class="form-row">
+                                            <div class="captcha-section">
+                                                <img class="temp-image" src="images/temp/captcha.png" alt="" title="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
+
                     </div>
                     <div class="footer-bar">
                         <div class="action-panel">
@@ -372,6 +394,11 @@
                                         </a>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="custom-liveChat">
+                            <div class="wrap">
+                                <img src="images/temp/liveChat.jpg" alt="Live Chat" title="Live Chat" />
                             </div>
                         </div>
                     </div>
@@ -420,14 +447,62 @@
         </div>
     </section>
 </div>
-<div class="chatContainer" id="chatContainer" style="display: block; z-index: 1000000; width: 205px !important; height: 79px !important;" prevtop="575" prevleft="1577"><div id="divClosedChatBarImage" style="display:none;"><img id="imgClosedChatBarImage" style="position:absolute;top:0px;left:50%;display:block;margin-top:-140px;margin-left:-100px;width:200px;max-width:200px;cursor:pointer;" src="#"></div><div class="transparent" style="opacity: 1; background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(255, 255, 255)), to(rgb(255, 255, 255)));"></div><div style="width:100%;height:100%;position:relative;"><div id="chatMoveContainer" style="position: absolute; top: 0px; left: 0px; width: 225px; height: 38px; cursor: move; display: none;"></div><iframe style="width:100%;height:100%;margin:0px;padding:0px;float:none;border:0px;top:0px;right:0px;bottom:0px;left:0px;background-color:transparent;" src="https://livesupporti.com/Scripts/../Views/clientGUI2.htm?location=http://localhost/#insurance&amp;acc=1345075f-428f-40b8-a786-d87e424778bc&amp;lng=&amp;os=Windows&amp;mobile=false&amp;popup=false&amp;ref=" frameborder="0" scrolling="no" allowtransparency="true" id="LiveSupportiMainFrame" name="LiveSupportiMainFrame"></iframe></div><div class="linkHolder" style="position: absolute !important; height: 25px !important; bottom: 0px !important; right: 0px !important; text-align: center !important; display: none;"><a href="https://livesupporti.com" target="new" style="float:right !important;margin-top:7px !important;margin-right:14px !important;line-height:11px !important;text-decoration:none !important;outline:none !important;cursor:pointer !important;"><span style="height:11px !important;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:10px !important;color:#FFFFFF !important;display:inline-block !important;" title="Live chat for your website">Powered by LiveSupporti </span></a></div></div>
+<footer id="site-footer">
+    <div class="footer-row">
+        <ul class="footer-nav">
+            <li>
+                <p><a href="#" title="О компании">О компании</a></p>
+                <p><a href="#" title="Финансовые показатели">Финансовые показатели</a></p>
+                <p><a href="#" title="Официальные документы">Официальные документы</a></p>
+            </li>
+            <li>
+                <p><a href="#" title="Карта региональных офисов">Карта региональных офисов</a></p>
+                <p><a href="#" title="Перечень СТО">Перечень СТО</a></p>
+                <p><a href="#" title="Партнеры и банки">Партнеры и банки</a></p>
+            </li>
+            <li>
+                <p><a href="#" title="PZU Украина страхование жизни">PZU Украина страхование жизни</a></p>
+                <p><a href="#" title="PZU S.A.">PZU S.A.</a></p>
+                <p><a href="#" title="PZU Lietuva">PZU Lietuva</a></p>
+                <p><a href="#" title="SOS-сервис Украина">SOS-сервис Украина</a></p>
+            </li>
+            <li>
+                <p><a href="#" title="Пресс-служба">Пресс-служба</a></p>
+                <p><a href="#" title="Карьера">Карьера</a></p>
+            </li>
+        </ul>
+    </div>
+    <div class="footer-row">
+        <div class="social-footer">
+            <div class="social-links">
+                <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="Facebook Cross Domain Communication Frame" aria-hidden="true" tabindex="-1" id="fb_xdm_frame_http" src="http://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f2e79f5ffc&amp;origin=http%3A%2F%2Fwww.pzu.com.ua" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="Facebook Cross Domain Communication Frame" aria-hidden="true" tabindex="-1" id="fb_xdm_frame_https" src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=42#channel=f2e79f5ffc&amp;origin=http%3A%2F%2Fwww.pzu.com.ua" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+                <script>(function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.4";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+                <div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/pzuukraine" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" style="float:left;margin-top:3px;margin-right:5px;" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpzuukraine&amp;layout=button_count&amp;locale=ru_RU&amp;sdk=joey&amp;share=true&amp;show_faces=true"><span style="vertical-align: bottom; width: 215px; height: 20px;"><iframe name="f45ca5d88" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="http://www.facebook.com/v2.4/plugins/like.php?action=like&amp;app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df34e169a1%26domain%3Dwww.pzu.com.ua%26origin%3Dhttp%253A%252F%252Fwww.pzu.com.ua%252Ff2e79f5ffc%26relation%3Dparent.parent&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2Fpzuukraine&amp;layout=button_count&amp;locale=ru_RU&amp;sdk=joey&amp;share=true&amp;show_faces=true" style="border: none; visibility: visible; width: 215px; height: 20px;" class=""></iframe></span></div>
 
+                <script src="https://apis.google.com/js/platform.js" gapi_processed="true"></script>
+                <div id="___ytsubscribe_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 112px; height: 24px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 112px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1457036772101" name="I0_1457036772101" src="https://www.youtube.com/subscribe_embed?usegapi=1&amp;channelid=UCTzJMRsI8RZm4pxsPRkRH4g&amp;layout=default&amp;count=default&amp;origin=http%3A%2F%2Fwww.pzu.com.ua&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.ru.9PeNcwd2Avw.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Frs%3DAGLTcCMfhJXHEfqnosR13KZjcoS9HUJiVA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1457036772101&amp;parent=http%3A%2F%2Fwww.pzu.com.ua&amp;pfname=&amp;rpctoken=24079599" data-gapiattached="true"></iframe></div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>2016 &copy; Copyright</p>
+        </div>
+    </div>
+</footer>
 <link rel="stylesheet" href="styles/chat-custom.css" type="text/css">
 <script src="js/libs/jquery-1.11.1.min.js"></script>
 <script src="js/libs/jquery.scrollify.min.js"></script>
 <script src="js/libs/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
 <script src="js/libs/fancySelect/fancySelect.js"></script>
+<script src="js/libs/inputmask.min.js"></script>
 <script src="js/libs/jquery.inputmask.min.js"></script>
+<script src="js/libs/inputmask.phone.extensions.min.js"></script>
+<script src="js/libs/jquery.ddslick.min.js"></script>
 <script src="js/main.js"></script>
 <!--<script type="text/javascript">-->
 <!--(function() {-->

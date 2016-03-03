@@ -1,6 +1,8 @@
 /*Theme changes*/
 
 div.fancy-select div.trigger {
+    max-width: 100%;
+    width: 207px;
     border-radius: 0;
     box-shadow: none;
     background: #1d2435;
@@ -19,6 +21,7 @@ div.fancy-select div.trigger.open {
 div.fancy-select div.trigger:after {
     color: #a9a9a9;
     border-top-color: #a9a9a9;
+    top: 16px;
 }
 
 div.fancy-select ul.options {
@@ -136,6 +139,29 @@ div.fancy-select ul.options li:hover {
 }
 
 .quote-form .form-row.full-width .fancy-select ul.options {
+    width: auto;
+    max-width: 100%;
+}
+
+.user-contacts-form .fancy-select .trigger {
+    font-size: 12px;
+    padding: 5px 24px 5px 9px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.user-contacts-form .fancy-select select {
+    font-size: 12px;
+    padding: 5px 24px 5px 9px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.user-contacts-form .fancy-select div.trigger:after {
+    top: 12px;
+}
+
+.user-contacts-form .fancy-select ul.options {
     width: auto;
     max-width: 100%;
 }

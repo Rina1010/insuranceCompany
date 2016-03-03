@@ -1,0 +1,9 @@
+/*Theme changes*/
+
+.curr-city .dd-select {
+    border-radius: 0;
+}
+
+.curr-city .dd-options {
+    font-size: 15px;
+}
