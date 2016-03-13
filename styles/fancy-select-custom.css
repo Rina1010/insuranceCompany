@@ -62,12 +62,12 @@ div.fancy-select ul.options li:hover {
 
 .check-form .user-choice .select-row .fancy-select .trigger {
     font-size: 12px;
-    padding: 4px 24px 5px 9px;
+    padding: 2px 24px 2px 9px;
     width: 500px;
 }
 
 .check-form .user-choice .select-row .fancy-select div.trigger:after {
-    top: 12px;
+    top: 8px;
 }
 
 .check-form .user-choice .select-row .fancy-select ul.options {
@@ -100,7 +100,7 @@ div.fancy-select ul.options li:hover {
 .quote-form .date-fields .fancy-select .trigger {
     font-size: 12px;
     padding: 4px 24px 5px 9px;
-    width: 65px;
+    width: 100%;
     max-width: 100%;
 }
 

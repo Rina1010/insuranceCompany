@@ -266,7 +266,7 @@ ul.contacts li a:hover {
 }
 
 .first-step p {
-    padding-top: 5vh;
+    padding-top: 1vh;
 }
 
 p.form-title {
@@ -282,7 +282,7 @@ p.form-title {
 }
 
 .first-step .form-control {
-    padding-top: 2vh;
+    padding-top: 1vh;
 }
 
 .first-step .form-control .form-label {
@@ -299,11 +299,11 @@ p.form-title {
     background-color: #2b72ff;
 }
 
-.first-step a.change-city-lnk {
+.first-step a.change-option-lnk {
     color: #aeb5c3;
 }
 
-.first-step a.change-city-lnk:hover {
+.first-step a.change-option-lnk:hover {
     color: #01d67a;
 }
 
@@ -472,6 +472,10 @@ p.form-title {
     overflow: visible;
 }
 
+.user-contacts-form .form-row.add-new-line {
+    padding-bottom: 5px;
+}
+
 .user-contacts-form .form-row label {
     font-size: 14px;
     color: #a9a9a9;
@@ -502,34 +506,75 @@ p.form-title {
 
 .user-contacts-form .add-new-line .field-block {
     float: left;
-    width: 440px;
+    width: 435px;
+    margin-left: 5px;
     position: relative;
 }
 
 .user-contacts-form .form-row .field-block input {
+    min-width: 1%;
     width: 100%;
-    min-width: auto;
-    height: 30px;
-    background: #1d2435;
-    border: 1px solid #a9a9a9;
-    border-width: 0 0 1px;
-    color: #aeb5c3;
+}
+
+.user-contacts-form .form-row .field-block input::-webkit-input-placeholder {
+    color: #8c94a7;
+}
+.user-contacts-form .form-row .field-block input::-moz-placeholder {
+    color: #8c94a7;
+}
+.user-contacts-form .form-row .field-block input:-moz-placeholder {
+    color: #8c94a7;
+}
+.user-contacts-form .form-row .field-block input:-ms-input-placeholder {
+    color: #8c94a7;
+}
+
+.user-contacts-form .form-row .field-block input::-webkit-input-placeholder {
+    text-indent: 0;   transition: text-indent 0.3s ease;
+}
+.user-contacts-form .form-row .field-block input::-moz-placeholder {
+    text-indent: 0;   transition: text-indent 0.3s ease;
+}
+.user-contacts-form .form-row .field-block input:-moz-placeholder {
+    text-indent: 0;   transition: text-indent 0.3s ease;
+}
+.user-contacts-form .form-row .field-block input:-ms-input-placeholder {
+    text-indent: 0;   transition: text-indent 0.3s ease;
+}
+.user-contacts-form .form-row .field-block input:focus::-webkit-input-placeholder {
+    text-indent: 500px;
+    transition: text-indent 0.3s ease;
+}
+.user-contacts-form .form-row .field-block input:focus::-moz-placeholder {
+    text-indent: 500px;
+    transition: text-indent 0.3s ease;
+}
+.user-contacts-form .form-row .field-block input:focus:-moz-placeholder {
+    text-indent: 500px;
+    transition: text-indent 0.3s ease;
+}
+.user-contacts-form .form-row .field-block input:focus:-ms-input-placeholder {
+    text-indent: 500px;
+    transition: text-indent 0.3s ease;
 }
 
 .user-contacts-form .form-row .field-block input:focus {
-    border: 1px solid #01d67a;
-    border-width: 0 0 1px 0;
+    background: #fff;
 }
 
-.user-contacts-form .form-row.get-call {
-    padding-top: 5px;
-    height: 63px;
+.user-contacts-form .form-row .field-block.get-call {
     overflow: visible;
 }
 
-.user-contacts-form .form-row.get-call > label {
+.user-contacts-form .form-row .field-block.get-call > label {
     margin-top: 18px;
     border-width: 1px;
+}
+
+.user-contacts-form .form-row .field-block.get-call label.field-notice {
+    float: left;
+    padding-left: 0;
+    line-height: 30px;
 }
 
 .user-contacts-form .field-table-wrap {
@@ -541,6 +586,7 @@ p.form-title {
 .user-contacts-form .field-table-wrap .field-item {
     display: table-cell;
     width: 50%;
+    vertical-align: top;
 }
 
 .user-contacts-form .field-table-wrap .field-item:first-child {
@@ -554,8 +600,8 @@ p.form-title {
 }
 
 .user-contacts-form .call-time-fields {
-    float: left;
-    width: 100%;
+    float: right;
+    width: 177px;
 }
 
 .user-contacts-form .call-time-fields span, .user-contacts-form .call-time-fields select, .user-contacts-form .call-time-fields .fancy-select {
@@ -575,7 +621,7 @@ p.form-title {
 
 .user-contacts-form .call-time-fields select, .user-contacts-form .call-time-fields .fancy-select {
     margin-left: 5px;
-    width: 95px;
+    width: 66px;
 }
 
 /* User Choice Check Form */
@@ -599,11 +645,11 @@ p.form-title {
     width: 100%;
     overflow: visible;
     line-height: 16px;
-    padding: 0 15px 10px;
+    padding: 0 5px 5px;
 }
 
 .check-form .form-row:first-child {
-    padding: 10px 15px 10px;
+    padding: 5px;
 }
 
 .check-form .user-choice {
@@ -613,14 +659,14 @@ p.form-title {
 }
 
 .check-form .user-choice > p {
-    line-height: 26px;
+    line-height: 22px;
     color: #e0e2e6;
 }
 
 .check-form .user-choice .select-row {
     position: absolute;
     width: 100%;
-    height: 26px;
+    height: 22px;
     top: 0;
     display: none;
 }
@@ -629,7 +675,7 @@ p.form-title {
     float: right;
     width: 24%;
     text-align: right;
-    line-height: 26px;
+    line-height: 22px;
 }
 
 .check-form .change-lnk a {
@@ -656,12 +702,13 @@ p.form-title {
 }
 
 .quote-form .form-centered-wrap {
-    max-width: 660px;
+    max-width: 1000px;
+    width: 100%;
 }
 
 .quote-form .form-inner {
-    float: left;
-    width: 430px;
+    width: 100%;
+    padding-right: 230px;
 }
 
 .quote-form .check-user-info {
@@ -679,7 +726,7 @@ p.form-title {
 }
 
 .quote-form .check-user-info p {
-    padding-bottom: 10px;
+    padding-bottom: 3px;
 }
 
 .quote-form .form-row {
@@ -700,16 +747,22 @@ p.form-title {
 }
 
 .quote-form .form-row .field-block {
-    float: left;
-    width: 230px;
+    padding-left: 210px;
+}
+
+.quote-form .form-row.add-new-line {
+    position: relative;
 }
 
 .quote-form .form-row.add-new-line .field-block {
-    width: 205px;
+    padding-right: 25px;
 }
 
 .quote-form .form-row.add-new-line .add-new-line-ico {
     width: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .quote-form .form-row.add-new-line .add-new-line-ico i {
@@ -760,6 +813,7 @@ p.form-title {
 .quote-form .links-group {
     display: table;
     width: 100%;
+    table-layout: fixed;
 }
 
 .quote-form .links-group .link-option {
@@ -797,6 +851,10 @@ p.form-title {
 }
 
 .quote-form .form-row.full-width-fields .field-block {
+    padding-left: 0;
+}
+
+.quote-form .form-row.full-width-fields .field-block {
     float: none;
     width: 100%;
 }
@@ -831,18 +889,13 @@ p.form-title {
     clear: both;
 }
 
-/* Action Panel Styles */
-
-.footer-bar {
-    width: 100%;
-    /*height: 24vh;*/
-    position: absolute;
-    bottom: 0;
-}
+/* Prices Section Styles */
 
 .prices-section {
-    width: 50%;
+    width: 80%;
     height: 14vh;
+    margin: 0 auto;
+    padding-top: 2vh;
 }
 
 .prices-section .price-wrap {
@@ -854,7 +907,7 @@ p.form-title {
 .prices-section p {
     color: #2b72ff;
     text-align: center;
-    font-size: 4.5vw;
+    font-size: 5vw;
     font-weight: bold;
     line-height: 0.8;
     padding-bottom: 2vh;
@@ -863,9 +916,31 @@ p.form-title {
 .prices-section p.price-title {
     color: #01d67a;
     text-align: center;
-    font-size: 2vh;
+    font-size: 2.5vh;
     font-weight: bold;
     line-height: 0.8;
+}
+
+/* Action Panel Styles */
+
+.footer-bar {
+    width: 100%;
+    /*height: 24vh;*/
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-bar .prices-section {
+    width: 50%;
+    margin: 0;
+}
+
+.footer-bar .prices-section p {
+    font-size: 4.5vw;
+}
+
+.footer-bar .prices-section p.price-title {
+    font-size: 2vh;
 }
 
 /* Action styles */
@@ -880,6 +955,7 @@ p.form-title {
     float: left;
     width: 50%;
     padding: 0 20px;
+    clear: left;
 }
 
 .action-button {
@@ -1016,19 +1092,19 @@ p.form-title {
 
 .nav-header {
     width: 100%;
-    height: 45px;
-    margin-bottom: -45px;
+    height: 32px;
+    margin-bottom: -32px;
     overflow: hidden;
     background-color: #eaeaea;
-    padding: 1.5vh 1vw;
+    padding: 1vh 1vw;
     color: #1d2435;
 }
 
 .nav-header .curr-time {
     width: 100%;
     overflow: hidden;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 11px;
+    line-height: 12px;
 }
 
 .nav-header .curr-time .wrap {
@@ -1042,7 +1118,7 @@ p.form-title {
 }
 
 ul.insuranse-type {
-    padding: 45px 0 0;
+    padding: 32px 0 0;
     margin: 0;
     list-style: none;
     vertical-align: middle;
