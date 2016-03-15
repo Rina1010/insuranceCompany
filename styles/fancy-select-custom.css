@@ -6,6 +6,7 @@ div.fancy-select div.trigger {
     border-radius: 0;
     box-shadow: none;
     background: #1d2435;
+    padding: 5px 24px 4px 9px;
     border: 1px solid #a9a9a9;
     color: #aeb5c3;
     text-transform: none;
@@ -21,7 +22,7 @@ div.fancy-select div.trigger.open {
 div.fancy-select div.trigger:after {
     color: #a9a9a9;
     border-top-color: #a9a9a9;
-    top: 16px;
+    top: 12px;
 }
 
 div.fancy-select ul.options {
@@ -76,7 +77,7 @@ div.fancy-select ul.options li:hover {
 
 .quote-form .fancy-select .trigger {
     font-size: 12px;
-    padding: 4px 24px 5px 9px;
+    padding: 0 24px 0 9px;
     width: 100%;
     max-width: 100%;
 }
@@ -89,7 +90,7 @@ div.fancy-select ul.options li:hover {
 }
 
 .quote-form .fancy-select div.trigger:after {
-    top: 9px;
+    top: 5px;
 }
 
 .quote-form .fancy-select ul.options {
@@ -99,7 +100,7 @@ div.fancy-select ul.options li:hover {
 
 .quote-form .date-fields .fancy-select .trigger {
     font-size: 12px;
-    padding: 4px 24px 5px 9px;
+    padding: 2px 24px 3px 9px;
     width: 100%;
     max-width: 100%;
 }
@@ -112,7 +113,7 @@ div.fancy-select ul.options li:hover {
 }
 
 .quote-form .date-fields .fancy-select div.trigger:after {
-    top: 9px;
+    top: 7px;
 }
 
 .quote-form .date-fields .fancy-select ul.options {

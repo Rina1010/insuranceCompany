@@ -39,8 +39,22 @@ function pageResize(){
         "padding-top": $("#header").height()
     });
 
+    $(".user-info-form").css({
+        "padding-bottom": $(".check-form").outerHeight() + 10
+    });
+
     $(".main-form").css({
         "padding-bottom": getFooterHeight() + 10
+    });
+
+    $(".check-user-form").css({
+        "height": function () {
+            return $(".main-form").height() > $(".user-info-form").outerHeight() ? ($("#mainPanel .section-wrap").outerHeight() - getFooterHeight()) : "auto"
+        }
+    });
+
+    $("#navPanel .section-wrap").height(function(){
+        return $("#navPanel").outerHeight() - $("#header").height();
     });
 
     $("#navPanel .section-wrap").height(function(){

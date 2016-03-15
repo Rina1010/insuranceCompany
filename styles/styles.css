@@ -151,6 +151,11 @@ ul.contacts li a:hover {
     padding: 2vh 0 175px;
 }
 
+.main-form .form-wrap {
+    height: 100%;
+    position: relative;
+}
+
 .main-form label.field-name {
     color: #aeb5c3;
 }
@@ -272,8 +277,8 @@ ul.contacts li a:hover {
 p.form-title {
     padding: 0;
     color: #01d67a;
-    font-size: 3vh;
-    line-height: 3.2vh;
+    font-size: 2.5vh;
+    line-height: 2.7vh;
     text-align: center;
 }
 
@@ -426,18 +431,18 @@ p.form-title {
 
 .captcha-section > img.temp-image {
     width: 100%;
-    max-height: 60px;
+    max-height: 40px;
 }
 
 /* User Info Form Styles */
 
 .user-info-form {
-    padding-top: 2vh;
+    padding-top: 1vh;
 }
 
 .user-info-form p.field-title {
     color: #01d67a;
-    padding-bottom: 20px;
+    padding-bottom: 1vh;
     text-align: center;
 }
 
@@ -629,27 +634,26 @@ p.form-title {
 .check-form {
     width: 50%;
     padding-right: 20px;
+    position: absolute;
+    bottom: 0;
 }
 
 .check-form p.form-title {
-    padding-bottom: 15px;
+    padding-bottom: 1vh;
 }
 
 .check-form .form-inner {
     border: 1px solid #a9a9a9;
     font-size: 12px;
     line-height: 14px;
+    padding: 5px;
 }
 
 .check-form .form-row {
     width: 100%;
     overflow: visible;
     line-height: 16px;
-    padding: 0 5px 5px;
-}
-
-.check-form .form-row:first-child {
-    padding: 5px;
+    padding: 0;
 }
 
 .check-form .user-choice {
@@ -726,20 +730,20 @@ p.form-title {
 }
 
 .quote-form .check-user-info p {
-    padding-bottom: 3px;
+    padding-bottom: 1px;
 }
 
 .quote-form .form-row {
     overflow: visible;
-    height: 36px;
-    padding-bottom: 10px;
+    height: 25px;
+    padding-bottom: 5px;
 }
 
 .quote-form .form-row label {
     color: #a9a9a9;
     float: left;
     width: 200px;
-    line-height: 26px;
+    line-height: 16px;
 }
 
 .quote-form .form-row.add-new-line > .select-label {
@@ -767,6 +771,7 @@ p.form-title {
 
 .quote-form .form-row.add-new-line .add-new-line-ico i {
     font-size: 18px;
+    line-height: 20px;
 }
 
 .quote-form .form-row .field-block.bordered-block {
@@ -777,8 +782,9 @@ p.form-title {
 
 .quote-form .form-row .field-block input[type = text], .quote-form .form-row .field-block input[type = email] {
     min-width: 100%;
-    height: 26px;
-    line-height: 26px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
     background: #c9cfdc;
     border: 1px solid #a9a9a9;
 }
@@ -839,7 +845,7 @@ p.form-title {
 }
 
 .quote-form .form-row > .half-of-width {
-    width: 75%;
+    width: 65%;
 }
 
 .quote-form .form-row.full-width-fields label {
@@ -876,9 +882,9 @@ p.form-title {
 }
 
 .quote-form .captcha-section {
-    padding: 15px;
+    padding: 5px;
     border: 1px solid #aeb5c3;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     float: left;
     width: 50%;
 }
