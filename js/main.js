@@ -44,7 +44,10 @@ function pageResize(){
     });
 
     $(".main-form").css({
-        "padding-bottom": getFooterHeight() + 10
+        "padding-bottom": function(){
+            getFooterHeight() + 10
+            //return getFooterHeight() > $(".custom-liveChat").outerHeight() ? (getFooterHeight() + 10) : ($(".custom-liveChat").outerHeight() + 10)
+        }
     });
 
     $(".check-user-form").css({
