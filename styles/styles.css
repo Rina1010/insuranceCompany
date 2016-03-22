@@ -718,6 +718,10 @@ p.form-title {
     padding-right: 230px;
 }
 
+.quote-form .first-quote-step .form-inner {
+    padding-top: 6vh;
+}
+
 .quote-form .form-centered-wrap.full-width .form-inner {
     max-width: 100%;
 }
